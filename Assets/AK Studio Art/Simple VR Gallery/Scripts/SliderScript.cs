@@ -12,7 +12,7 @@ public class SliderScript : MonoBehaviour
     void Start()
     {
         _slider.onValueChanged.AddListener((v) => {
-        _sliderText.text = "Bid Amount: $" + v.ToString("0.00");
+        _sliderText.text = "Bid Amount: " + v.ToString("0.00") + " Algos";
         });
         
     }
