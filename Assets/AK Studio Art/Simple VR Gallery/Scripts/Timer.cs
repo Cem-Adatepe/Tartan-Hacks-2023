@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private Toggle _toggler;
+    [SerializeField] private GameObject _canvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class Timer : MonoBehaviour
     IEnumerator waiter()
     {
         yield return new WaitForSeconds(3);
-        Object.Destroy(this.gameObject);
+        gameObject.SetActive(false);
+        _canvas.SetActive(true);
     }
 }
